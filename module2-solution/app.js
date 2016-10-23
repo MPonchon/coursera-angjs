@@ -1,5 +1,9 @@
 /*
 app.js
+
+https://mponchon.github.io/coursera-angjs/module2-solution/index.html
+
+
 */
 (function () {
   'use strict';
