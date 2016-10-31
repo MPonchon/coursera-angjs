@@ -1,0 +1,18 @@
+<!-- items.template.html -->
+    <a ui-sref="home" ui-sref-active="activeTab">Home</a> &lt;
+    <a ui-sref="cat" ui-sref-active="activeTab">Categories</a> &lt;
+	Items  
+	  
+
+    <div>
+	<ul>
+		<li ng-repeat="item in itemctrl.items"  >
+		{{ item.name }} : </br>
+		{{ item.description }}
+		</br>
+
+		</li>
+	</ul>
+	</div>
+
+

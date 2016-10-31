@@ -52,15 +52,15 @@ function foundItemsDirectiveController() {
 }
 
 
-NarrowItDownController.$inject = ['$scope', 'MenuSearchService'];
-function NarrowItDownController($scope, MenuSearchService) {
+NarrowItDownController.$inject = [ 'MenuSearchService'];
+function NarrowItDownController( MenuSearchService) {
 	var narrow = this;
 	var search = "";
 	//console.log("search.", search);
 	//console.log("scope.btSearch", $scope.btSearch);
 	
-	$scope.rafraichir = function () {
-		search = $scope.btSearch;
+	narrow.rafraichir = function () {
+		search = narrow.btSearch;
 		console.log("rafraichir search.", search);
 		var promise = MenuSearchService.getMatchedMenuItems(search);
 		promise.then(function (response) {

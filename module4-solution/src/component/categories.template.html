@@ -1,0 +1,14 @@
+<!-- categories.template.html  ui-sref="itemDetail({itemId: $index}) -->
+
+<a ui-sref="home">Home</a> < Categories
+<ul>
+	<li ng-repeat="category in catctrl.categories"  
+	   
+	    ui-sref="items({itemId: catctrl.getCat($index)})" >  <!--  ui-sref="items({itemId: $index})" -->
+		{{ $index }}
+	  [{{ category.short_name }}] 
+	  {{ category.name }}
+	  
+	  {{ catctrl.getCat($index) }}
+	</li>
+</ul>

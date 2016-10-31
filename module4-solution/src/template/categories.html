@@ -1,0 +1,13 @@
+<div> <h3>List of Menu Categories</h3>
+      <ul>
+        <li ng-repeat="category in catCtrl.categories" ui-sref="itemDetail({itemId: $index})">
+          (<a ui-sref="/" ui-sref-active="activeTab">{{ category.short_name }}</a>)
+          {{ category.name }}
+        </li>
+      </ul>
+</div>
+
+  <li ng-repeat="item in $ctrl.items"
+      ui-sref="itemDetail({itemId: $index})">
+    {{ item.quantity }} of {{ item.name }}
+  </li>
