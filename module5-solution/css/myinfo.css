@@ -1,0 +1,11 @@
+input{
+  color: #557c3e;
+  text-align: left;
+  padding-right: 15px;
+}
+
+.error {
+  color: #FFDD55;
+  text-align: left;
+  padding-right: 15px;
+}

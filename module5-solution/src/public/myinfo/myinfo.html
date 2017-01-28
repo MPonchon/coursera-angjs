@@ -1,0 +1,39 @@
+<h2>Sign up for the newsletter</h2>
+{{ myinfoCtrl.shortname}}
+
+<div ng-controller="myinfoController">
+  <form novalidate name="myinfoform">
+    <label>First Name: <input type="text" ng-model="myinfoCtrl.fname" name="fName" required="" /></label>
+    <br />
+    <div ng-show="myinfoform.$submitted || myinfoform.fName.$touched">
+      <div ng-show="myinfoform.fName.$error.required" class="error">Please, tell us your first name.</div>
+    </div>
+
+    <label>Last Name:  <input type="text" ng-model="user.lname" name="lName" required="" /></label>
+    <br />
+    <div ng-show="myinfoform.$submitted || myinfoform.lName.$touched">
+      <div ng-show="myinfoform.lName.$error.required" class="error">Please, tell us your last name.</div>
+    </div>
+
+    <label>E-mail: <input type="email" ng-model="user.email" name="email" required="" /></label><br />
+    <span class="error"
+        ng-show="(myinfoform.$submitted) && (myinfoform.email.$error.required || myinfoform.email.$error.email)">
+      <div ng-show="myinfoform.email.$error.required">Please, tell us your valid email.</div>
+    </span>
+
+    <label>Phone : <input type="text" ng-model="user.phone" name="phone" required=""/></label><br />
+    <div ng-show="myinfoform.$submitted || myinfoform.phone.$touched">
+      <div ng-show="myinfoform.phone.$error.required" class="error">Please, tell us your phone.</div>
+    </div>
+
+    <label>Favorite dish: <label><input type="text" ng-model="user.dish" name="dish" required=""/></label><br />
+    <div ng-show="myinfoform.$submitted || myinfoform.dish.$touched">
+      <div ng-show="myinfoform.dish.$error.required" class="error">Please, tell us your favorite dish.</div>
+    </div>
+
+
+    <input type="button" ng-click="reset(myinfoform)" value="Reset" />
+    <input type="submit" ng-click="update(user)" value="Envoi" />
+  </form>
+  <pre>user = {{user | json }}</pre>
+</div>
